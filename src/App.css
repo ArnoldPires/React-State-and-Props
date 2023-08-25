@@ -29,6 +29,10 @@ h1 {
   width: 45rem;
   display: flex;
 }
+header {
+  border: 3px solid #4a90e2;
+  margin: 3px;
+}
 /* Media Queries */
 @media (max-width: 760px) {
   .containerApp {
@@ -41,9 +45,9 @@ h1 {
     width: 25rem;
   }
   .homePage {
-    width: auto;
+    width: initial !important;
   }
   .employeePage {
-    width: auto;
+    width: initial !important;
   }
 }

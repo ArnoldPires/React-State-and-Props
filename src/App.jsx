@@ -1,13 +1,18 @@
-import Header from "./components/header/Header";
-
+import React from "react";
 import './App.css';
+import HomePage from "./components/homePage/HomePage";
+import EmployeePage from './components/employeePage/EmployeePage';
 
-function App() {
+export default function App() {
   return (
-  <body>
-    <Header />
-  </body>
-  );
+    <>
+      <h1>State and Props</h1>
+      <section className="containerApp">
+        <section className="homePage">
+          <HomePage />
+        </section>
+        <EmployeePage />
+      </section>
+    </>
+  )
 }
-
-export default App;
