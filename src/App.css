@@ -1,58 +1,49 @@
-:root {
-  --dark-cerulean: #124e78;
-  --maastricht-blue: #0b132b;
-  --yankees-blue: #1c2541;
-  --sea-serpent: #5bc0be;
-  --aquamarine: #6fffe9;
-  --react: #00d8ff;
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-html {
-  background: var(--yankees-blue);
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clear {
+	clear: both;
 }
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-.container > div {
-  display: flex;
-  background: var(--yankees-blue);
-  flex-wrap: wrap;
-  justify-content: space-around;
-  min-height: 60vh;
-  align-items: flex-start;
-}
-.board {
-  flex-basis: 60%;
-  display: grid;
-  grid-template-columns: 15vw 15vw 15vw;
-  grid-template-rows: 15vw 15vw 15vw;
-  color: white;
-  justify-content: stretch;
-  justify-content: center;
-}
-.board div {
-  display: flex;
-  align-items: center;
-  border: 3px solid var(--react);
-}
-h4 {
-  text-align: center;
-  flex-basis: 100%;
-  align-self: center;
-}
-.X, .O {
-  flex-basis: 45%;
-  text-align: center;
-}
-.X {
-  color: var(--sea-serpent);
-}
-.O {
-  color: var(--aquamarine);
+  width: 100%;
+  font-family: sans-serif;
 }
 h1 {
-  flex-basis: 60%;
-  color: var(--react);
   text-align: center;
+}
+.containerApp {
+  border: 5px solid black;
+  margin: 0 auto;
+  width: 45rem;
+  display: flex;
+}
+/* Media Queries */
+@media (max-width: 760px) {
+  .containerApp {
+    width: 37rem;
+  }
+}
+@media (max-width: 615px) {
+  .containerApp {
+    display: block;
+    width: 25rem;
+  }
+  .homePage {
+    width: auto;
+  }
+  .employeePage {
+    width: auto;
+  }
 }
